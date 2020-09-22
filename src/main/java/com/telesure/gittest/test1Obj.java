@@ -8,10 +8,13 @@ public class test1Obj implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "name")
+	@org.kie.api.definition.type.Label("name")
 	private java.lang.String name;
-	@org.kie.api.definition.type.Label(value = "age")
+	@org.kie.api.definition.type.Label("age")
 	private java.lang.String age;
+
+	@org.kie.api.definition.type.Label(value = "status")
+	private java.lang.String status;
 
 	public test1Obj() {
 	}
@@ -32,9 +35,19 @@ public class test1Obj implements java.io.Serializable {
 		this.age = age;
 	}
 
-	public test1Obj(java.lang.String name, java.lang.String age) {
+	public java.lang.String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
+	public test1Obj(java.lang.String name, java.lang.String age,
+			java.lang.String status) {
 		this.name = name;
 		this.age = age;
+		this.status = status;
 	}
 
 }
