@@ -6,12 +6,35 @@ package com.telesure.gittest;
 
 public class test1Obj implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public test1Obj() {
-    }
+	@org.kie.api.definition.type.Label(value = "name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "age")
+	private java.lang.String age;
 
+	public test1Obj() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.String getAge() {
+		return this.age;
+	}
+
+	public void setAge(java.lang.String age) {
+		this.age = age;
+	}
+
+	public test1Obj(java.lang.String name, java.lang.String age) {
+		this.name = name;
+		this.age = age;
+	}
 
 }
